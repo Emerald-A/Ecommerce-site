@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "../css/index.css" rel = "stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <title>Account</title>
+</head>
+<body>  
+<div class = "container">  
+    <div class="navbar">
+        <div class="logo">
+          <img src="../images/gbb.svg" class = "svg-image" width="120px"> 
+         <strong> GOBUYBOOKS </strong>
+        </div>
+        <nav>
+          <ul id = "MenuItems">
+            <li><a href=""> Home </a></li>
+            <li><a href=""> Products </a></li>
+            <li><a href=""> About </a></li>
+            <li><a href=""> Contact </a></li>
+            <li><a href=""> Account </a></li>
+          </ul>
+        </nav>
+        <img src="https://img.icons8.com/material-outlined/24/000000/fast-cart.png"/>
+        <!--img src="../images/cart.jfif" width="30px" height="30px" alt=""-->
+        <!--i class="fa fa-cart-arrow-down" aria-hidden="true"></i-->
+        <img src="../images/menu.png" class = "menu-icon" onclick="menutoggle()" alt="">
+    </div> 
+</div>
+
+
+<!--account-->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="../images/images.jfif" width="100%" alt="">
+            </div>
+
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()"> Login</span>
+                        <span onclick="register()"> Register</span>
+                        <hr id = "indicator">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn"> Login </button>
+                         <a href=""> Forgot password</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn"> Register </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>
+          Download Our App
+        </h3>
+        <p> Enjoy Awesome Stuffs</p>
+      </div>
+
+      <div class="footer-col-2">
+          <img src="../images/gbb.svg" alt="">
+        <p> We believe evryone is perfect in their imperfections and all can do whatever they want  </p>
+      </div>
+      
+      <div class="footer-col-3">
+        <h3>
+          Useful Links
+        </h3>
+        <ul>
+          <li> Blog Post </li>
+          <li> Blog Post </li>
+          <li> Blog Post </li>
+          <li> Blog Post </li>
+          <li> Blog Post </li>
+        </ul>
+      </div>
+
+      <div class="footer-col-4">
+        <h3>
+          Follow Us
+        </h3>
+        <ul>
+          <li> Facebook </li>
+          <li> Twitter </li>
+          <li> Instagram </li>
+          <li> YouTube </li>
+          <li> Blog Post </li>
+        </ul>
+      </div>
+
+
+    </div>
+    <hr>
+    <p class = "Copyright"> Copyright 2020 - GOBUYBOOKS</p>
+  </div>
+</div>
+
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+    {
+      MenuItems.style.maxHeight = "200px";
+    }
+    else
+    {
+      MenuItems.style.maxHeight = "0px";
+    }
+  }
+</script>
+
+<!--js form-->
+
+<script>
+ var LoginForm = document.getElementById("LoginForm");
+ var RegForm = document.getElementById("RegForm");
+ var indicator = document.getElementById("indicator");
+   
+    function register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+
+    function login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+
+</script>
+
+
+</body>
+</html>
